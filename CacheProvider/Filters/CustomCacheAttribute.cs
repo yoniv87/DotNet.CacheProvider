@@ -27,10 +27,7 @@ namespace CacheProvider.Filters
             _queryParams = queryParams;
             _formParams = formParams;
             _getAdditionalData = getAdditionalData;
-            _cacheService =
-                (ICacheService)
-                    GlobalConfiguration.Configuration.DependencyResolver.GetService(typeof(ICacheService)) ??
-                _cacheService.Resolve();
+            _cacheService = _cacheService.Resolve();
             _duration = GetDurationByClassName(cacheClass);
         }
 
