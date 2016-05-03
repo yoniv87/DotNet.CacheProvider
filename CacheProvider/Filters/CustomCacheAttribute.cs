@@ -68,8 +68,8 @@ namespace CacheProvider.Filters
 
         private string GetCustomKey(HttpActionContext actionContext, AvailableContentType contentType)
         {
-            string controllerName = actionContext.Request.GetRouteData().Values["controller"].ToString();
-            string actionName = actionContext.Request.GetRouteData().Values["action"].ToString();
+            string controllerName = actionContext.ControllerContext.ControllerDescriptor.ControllerName;
+            string actionName = actionContext.ActionDescriptor.ActionName;
             string result = $"{controllerName}.{actionName}.{contentType}.{GetQueryParams(actionContext)}|{GetFormParams(actionContext)}";
             if (_getAdditionalData)
             {

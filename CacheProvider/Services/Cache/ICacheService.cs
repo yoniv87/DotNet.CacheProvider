@@ -14,7 +14,7 @@ namespace CacheProvider.Services.Cache
         void Clear();
     }
 
-    public static class CacheServiceExtenssion
+    public static class CacheServiceExtension
     {
         public static ICacheService Resolve(this ICacheService cacheService)
         {
