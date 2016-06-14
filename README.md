@@ -15,7 +15,7 @@ In *DotNet.CacheProvider* you can also use Cache for your own needs.
 To use CacheService you need to implement these rows:
 ```
 ICacheService cacheService;
-cacheService =  = cacheService.Resolve();
+cacheService = cacheService.Resolve();
 ```
 Cache Service have these functions:
 ```
