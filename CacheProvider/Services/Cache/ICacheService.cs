@@ -34,7 +34,7 @@ namespace CacheProvider.Services.Cache
     internal class CacheServiceManager
     {
         private static readonly Lazy<ICacheService> RedisLazy = new Lazy<ICacheService>(() => new RedisCacheService());
-        private static readonly Lazy<ICacheService> MemCacheLazy = new Lazy<ICacheService>(() => new RedisCacheService());
+        private static readonly Lazy<ICacheService> MemCacheLazy = new Lazy<ICacheService>(() => new MemoryCacheService());
         private CacheServiceManager()
         {
         }
